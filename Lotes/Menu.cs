@@ -7,11 +7,12 @@ namespace Lotes
 {
     class Menu
     {
+        public static SAPbobsCOM.Company sbo = null;
         public void AddMenuItems()
         {
             SAPbouiCOM.Menus oMenus = null;
             SAPbouiCOM.MenuItem oMenuItem = null;
-
+            sbo = (SAPbobsCOM.Company)SAPbouiCOM.Framework.Application.SBO_Application.Company.GetDICompany();
             oMenus = Application.SBO_Application.Menus;
 
             SAPbouiCOM.MenuCreationParams oCreationPackage = null;
